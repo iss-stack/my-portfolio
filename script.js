@@ -87,7 +87,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-// --- Smooth Scrolling & Nav Highlight ---
+// --- Smooth Scrolling & Nav Highlight with Scroll Spy ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -96,13 +96,58 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
             const target = document.querySelector(targetId);
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
+            if (target) {
+                // Determine a slight offset so the section titles are clearly visible below navigation
+                const offset = window.innerWidth <= 768 ? 100 : 60;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
-        
-        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-        this.classList.add('active');
     });
 });
+
+// Scroll Spy implementation
+const sections = document.querySelectorAll('section, main.hero');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+function scrollSpy() {
+    let currentSectionId = '';
+    // Adjust trigger position to be about 40% from top of viewport for perfect UX activation
+    const scrollPosition = window.scrollY + window.innerHeight * 0.4;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            if (section.classList.contains('hero')) {
+                currentSectionId = '#';
+            } else if (section.id) {
+                currentSectionId = '#' + section.id;
+            }
+        }
+    });
+
+    if (currentSectionId) {
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentSectionId) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+}
+
+window.addEventListener('scroll', scrollSpy);
+window.addEventListener('load', scrollSpy);
+window.addEventListener('resize', scrollSpy);
+
 
 // --- Project Modal Logic ---
 const modal = document.getElementById("projectModal");
@@ -112,9 +157,12 @@ const closeBtn = document.querySelector(".close-modal");
 const projectData = {
     "Graphic Designs": {
         title: "Graphic Designs Showcase",
-        tags: "BRANDING • VISUAL IDENTITY",
-        img: "assets/graphic_design_project.png",
-        desc: "A showcase of premium graphic design work, featuring the 'Rooted.Rising.Filipina' campaign. This project focuses on bold visual storytelling, cultural heritage, and impactful brand messaging."
+        tags: "ADVOCACY • VISUAL IDENTITY • POSTER DESIGN",
+        images: [
+            "assets/graphic-equal-opportunities.jpg",
+            "assets/rooted-rising-filipina.jpg"
+        ],
+        desc: "A showcase of premium graphic design works featuring:<br><br>1. <strong>Equal Talent, Unequal Opportunities</strong>: A conceptual advocacy poster highlighting social hierarchy, opportunity access, and structural equality.<br><br>2. <strong>Rooted.Rising.Filipina</strong>: A cultural leadership campaign poster honoring pre-colonial Babaylan leaders and advocating for modern gender equality and inclusive representation."
     },
     "Video Editing": {
         title: "Video Editing & Motion",
