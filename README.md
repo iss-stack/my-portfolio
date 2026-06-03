@@ -24,7 +24,6 @@
 🎯 Goal: To become a highly skilled IT professional who develops impactful and user-centered technologies.
 
 
-
 ## 🛠️ Skills
 
 ### 💻 Programming & Development
