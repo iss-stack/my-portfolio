@@ -33,12 +33,12 @@
 
 ### 🎨 UI Design, Graphic Design & Multimedia
 
-<p align="center">
+
   <img src="https://img.shields.io/badge/Figma-1E90FF?style=for-the-badge&logo=figma&logoColor=white" />
   <img src="https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white" />
   <img src="https://img.shields.io/badge/Adobe%20Photoshop-001E36?style=for-the-badge&logo=adobephotoshop&logoColor=31A8FF" />
   <img src="https://img.shields.io/badge/CapCut-000000?style=for-the-badge&logo=capcut&logoColor=white" />
-</p>
+
 
 ### 📊 Productivity Tools
 ![Microsoft Office](https://img.shields.io/badge/Microsoft_Office-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white)
