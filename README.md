@@ -57,10 +57,6 @@
 - Research-Based System Design
 
 ### 🎨 UI/UX Prototype Designs
-- Responsive Interfaces
-- Wireframing
-- User Experience Design
-- Interactive Prototypes
 
 ### 🌐 Personal Portfolio Website
 - Modern UI/UX
