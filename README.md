@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=28&duration=2500&pause=1000&color=1E90FF&center=true&vCenter=true&width=700&lines=Information+Systems+Student;Davao+del+Norte+State+College;Java+Developer;UI%2FUX+Designer;Future+IT+Professional;Building+Innovative+Digital+Solutions" />
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=28&duration=2500&pause=1000&color=1E90FF&center=true&vCenter=true&width=700&lines=Information+Systems+Student;Davao+del+Norte+State+College;UI%2FUX+Designer;Future+IT+Professional;Building+Innovative+Digital+Solutions" />
 
 </div>
 
