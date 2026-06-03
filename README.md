@@ -61,8 +61,6 @@
 - Climate Action Monitoring
 - Research-Based System Design
 
-### 🎨 UI/UX Prototype Designs
-
 
 ## 🏆 Achievements
 
