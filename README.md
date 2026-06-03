@@ -63,12 +63,6 @@
 
 ### 🎨 UI/UX Prototype Designs
 
-### 🌐 Personal Portfolio Website
-- Modern UI/UX
-- Professional Branding
-- Responsive Design
-- Project Showcase
-
 
 ## 🏆 Achievements
 
